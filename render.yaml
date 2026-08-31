@@ -1,3 +1,4 @@
+# BOQ ERP — Render Blueprint (auto-provisions Postgres + API)
 services:
   - type: web
     name: boq-erp-api
@@ -5,6 +6,7 @@ services:
     rootDir: backend
     dockerfilePath: ./Dockerfile
     plan: free
+    region: oregon
     healthCheckPath: /up
     envVars:
       - key: APP_ENV
@@ -24,8 +26,9 @@ services:
           name: boq-erp-db
           property: connectionString
       - key: RUN_SEED
-        value: "true"
+        value: "false"
 
 databases:
   - name: boq-erp-db
     plan: free
+    region: oregon
