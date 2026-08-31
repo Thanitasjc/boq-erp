@@ -2,6 +2,10 @@
 
 Construction ERP system — BOQ, Budget, Procurement, Progress, Finance.
 
+**Repository:** https://github.com/Thanitasjc/boq-erp
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Thanitasjc/boq-erp)
+
 ## Stack
 
 | Layer | Technology | Deploy |
@@ -113,11 +117,10 @@ Browser → Vercel (Next.js) → Render (Laravel API) → Supabase (PostgreSQL)
 
 ### 1. GitHub
 
+Repo: **https://github.com/Thanitasjc/boq-erp** (already pushed)
+
 ```bash
-git init -b main
-git add -A
-git commit -m "Initial commit: BOQ ERP"
-gh repo create boq-erp --public --source=. --remote=origin --push
+git clone https://github.com/Thanitasjc/boq-erp.git
 ```
 
 ### 2. Supabase (Database)
@@ -129,8 +132,8 @@ gh repo create boq-erp --public --source=. --remote=origin --push
 
 ### 3. Render (Backend API)
 
-1. Open [Render Dashboard](https://dashboard.render.com/)
-2. **New → Blueprint** → connect GitHub repo `boq-erp`
+1. Open [Render Dashboard](https://dashboard.render.com/) or click **Deploy to Render** button above
+2. **New → Blueprint** → connect GitHub repo `Thanitasjc/boq-erp`
 3. Render reads `render.yaml` at repo root
 4. Set environment variables in the `boq-api` service:
 
@@ -147,7 +150,7 @@ gh repo create boq-erp --public --source=. --remote=origin --push
 ### 4. Vercel (Frontend)
 
 1. Open [vercel.com](https://vercel.com) → **Add New Project**
-2. Import GitHub repo `boq-erp`
+2. Import GitHub repo `Thanitasjc/boq-erp`
 3. Set **Root Directory** = `frontend`
 4. Environment variable:
 
