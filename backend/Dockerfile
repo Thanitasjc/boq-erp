@@ -1,7 +1,11 @@
 FROM php:8.2-cli-alpine
 
-RUN apk add --no-cache postgresql-dev libpq \
-    && docker-php-ext-install pdo pdo_pgsql
+RUN apk add --no-cache \
+        postgresql-dev libpq \
+        freetype-dev libjpeg-turbo-dev libpng-dev \
+        libzip-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_pgsql gd zip
 
 WORKDIR /var/www
 

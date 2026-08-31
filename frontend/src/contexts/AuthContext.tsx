@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { authApi, clearToken, setToken, User } from "@/lib/api";
+import { authApi, clearToken, getToken, setToken, User } from "@/lib/api";
 
 interface AuthContextType {
   user: User | null;
@@ -24,6 +24,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   const fetchUser = useCallback(async () => {
+    if (!getToken()) {
+      setUser(null);
+      setLoading(false);
+      return;
+    }
+
     try {
       const u = await authApi.user();
       setUser(u);
