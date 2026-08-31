@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+
+backend/vendor/
+backend/.env
+backend/database/database.sqlite
+
+frontend/node_modules/
+frontend/.env.local
+frontend/.next/
