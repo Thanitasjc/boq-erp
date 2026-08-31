@@ -20,6 +20,12 @@ services:
       - key: DB_CONNECTION
         value: pgsql
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: boq-erp-db
+          property: connectionString
       - key: RUN_SEED
         value: "true"
+
+databases:
+  - name: boq-erp-db
+    plan: free
