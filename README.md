@@ -4,6 +4,12 @@ Construction ERP system — BOQ, Budget, Procurement, Progress, Finance.
 
 **Repository:** https://github.com/Thanitasjc/boq-erp
 
+| Environment | URL |
+|-------------|-----|
+| Frontend (Vercel) | https://boq-erp.vercel.app |
+| Backend API (Render) | https://boq-api.onrender.com *(after Blueprint deploy)* |
+| Database (Supabase) | PostgreSQL — set `DATABASE_URL` in Render |
+
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Thanitasjc/boq-erp)
 
 ## Stack
